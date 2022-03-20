@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    <title>Piedra Papel o Tijeras</title>
+</head>
+
+<style>
+    body{
+        font-family: 'Ubuntu', sans-serif;
+        margin: 0;
+    }
+
+    .game{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    }
+
+    .form{
+    display: flex;
+    flex-direction: column;
+     width: 180px;
+     
+    } 
+
+
+    .primary-button{
+    background-color: #ACD9B2;
+    border-radius: 8px;
+    height: 44px;
+    font-size: 16px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    width: 50%;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 20px;
+    
+    }
+
+    .seleccion{
+        margin-top: 20px;
+    }
+
+    .seleccion{
+        background-color: #F7F7F7;
+        border: none;
+        border-radius: 8px;
+        height: 30px;
+        font-size: 16px;
+        padding: 6px;
+        margin-bottom: 12px;
+        margin-top: 6px;
+        }
+
+
+        input{
+        background-color: #F7F7F7;
+        border: none;
+        border-radius: 8px;
+        height: 30px;
+        font-size: 16px;
+        padding: 6px;
+        margin-bottom: 12px;
+        margin-top: 6px;
+        width: 40px;
+        text-align: center;
+        }
+
+        .resul{
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+
+</style>
+<body>
+    <div class="game">
+    <header>
+        <h1>
+            Juego de Piedra Papel o Tijera
+        </h1>
+    </header>
+    <script src="./piedra.js"></script>
+
+
+    <div class="form-conteiner">
+        <h2>Toma tu desicion</h2>
+        <form action="/" class="form">
+            <!-- <input type="text" id="seleccion" class="seleccion" placeholder="Piedra Papel o Tijera"> -->
+            <select name="seleccion" id="seleccion" class="seleccion">
+                <option value="piedra">Piedra</option>
+                <option value="papel">Papel</option>
+                <option value="tijera">Tijera</option>
+            </select>
+            <button type="button" class="primary-button" onclick="juego()">Play</button>
+            
+        </form>
+    </div>
+
+    <div>
+        <h2>Score</h2>
+        <label for="">Tu</label>
+        <input type="text" id="scoretu">
+        <input type="text" id="scoremaquina">
+        <label for="">Maquina</label>
+    </div>
+    <p id="resul" class="resul"></p>
+</div>
+
+</body>
+</html>
